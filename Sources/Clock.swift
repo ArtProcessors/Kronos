@@ -81,7 +81,7 @@ public struct Clock {
             }
 
             if done == total {
-                completion?(self.now, offset)
+                completion?(offset == nil ? nil : self.now, offset)
             }
         }
     }
